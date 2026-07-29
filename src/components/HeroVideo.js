@@ -18,7 +18,7 @@ export default function HeroVideo() {
             <div className="absolute inset-0 w-full h-full">
                 <div className="absolute inset-0 bg-gradient-to-b from-db-dark/30 via-db-dark/65 to-db-dark z-10" />
                 <video autoPlay loop muted playsInline className="w-full h-full object-cover scale-105">
-                    <source src="https://daveparty-xbozrtfm.manus.space/manus-storage/compressed_video_02338fcf.mp4" type="video/mp4" />
+                    <source src="https://daveandbustersindia.com/asset/IMG_5271.MP4" type="video/mp4" />
                 </video>
             </div>
 

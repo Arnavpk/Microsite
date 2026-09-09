@@ -44,7 +44,7 @@ export default function VenueDetails() {
                 {/* Section header */}
                 <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10 space-y-2">
                     <h2 className="text-2xl sm:text-3xl md:text-5xl font-black text-white text-center">
-                        INSIDE THE ARENA
+                        EAT, DRINK, PLAY, WATCH
                     </h2>
                 </div>
 

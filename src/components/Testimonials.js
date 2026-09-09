@@ -132,11 +132,12 @@ export default function Testimonials() {
                 </div>
 
                 {/* Grid of all testimonials */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 max-w-6xl mx-auto">
+                {/* Grid of all testimonials */}
+                <div className="flex sm:grid overflow-x-auto snap-x snap-mandatory scroll-px-4 gap-4 sm:gap-5 -mx-4 px-4 sm:mx-0 sm:px-0 sm:overflow-visible sm:grid-cols-2 lg:grid-cols-4 max-w-6xl sm:mx-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
                     {TESTIMONIALS.map((t) => (
                         <div
                             key={t.id}
-                            className="flex flex-col gap-4 rounded-xl border border-white/10 bg-db-dark-card p-5 sm:p-6 hover:border-db-orange/30 transition-colors duration-300"
+                            className="snap-center shrink-0 w-[82%] sm:w-auto flex flex-col gap-4 rounded-xl border border-white/10 bg-db-dark-card p-5 sm:p-6 hover:border-db-orange/30 transition-colors duration-300"
                         >
                             <StarRating rating={t.rating} />
                             <p className="text-sm text-gray-300 leading-relaxed flex-1">

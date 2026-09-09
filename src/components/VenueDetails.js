@@ -70,7 +70,7 @@ export default function VenueDetails() {
                     {/* Brand copy — 6 of 12 cols on lg */}
                     <div className="lg:col-span-6 space-y-4 sm:space-y-6 text-center lg:text-left">
                         <p className="text-base sm:text-lg md:text-[21px] font-semibold text-db-orange tracking-wider uppercase font-display">
-                            EAT, DRINK, PLAY, WATCH — ALL UNDER ONE NEON ROOF
+                            EAT, DRINK, PLAY, WATCH — ALL UNDER ONE ROOF
                         </p>
                         <div className="text-muted-foreground space-y-4 font-body text-sm sm:text-base leading-relaxed">
                             <p>

@@ -12,32 +12,47 @@ export default function HeroVideo() {
     };
 
     return (
-        <section className="relative h-[100svh] sm:h-[90vh] md:h-[85vh] w-full overflow-hidden flex items-center justify-center">
+        <section className="relative w-full bg-db-dark">
 
-            {/* ── Video Background ──────────────────────────────────── */}
-            <div className="absolute inset-0 w-full h-full">
-                <div className="absolute inset-0 bg-gradient-to-b from-db-dark/30 via-db-dark/65 to-db-dark z-10" />
+            {/* ── Video (full screen) ───────────────────────────────── */}
+            <div className="relative h-[100svh] sm:h-[90vh] md:h-[85vh] w-full overflow-hidden">
+                <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-b from-transparent to-db-dark z-10" />
                 <video autoPlay loop muted playsInline className="w-full h-full object-cover scale-105">
                     <source src="https://daveandbustersindia.com/asset/IMG_5271.MP4" type="video/mp4" />
                 </video>
+
+                {/* ── Scroll Down ───────────────────────────────────── */}
+                <div className="absolute bottom-6 sm:bottom-8 left-1/2 -translate-x-1/2 z-20 animate-bounce">
+                    <button
+                        onClick={scrollDown}
+                        className="flex flex-col items-center gap-2 text-[10px] sm:text-xs font-semibold tracking-widest text-white/60 hover:text-white transition-colors cursor-pointer"
+                    >
+                        SCROLL DOWN
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
+                            className="h-4 w-4 rotate-90 text-db-orange">
+                            <path d="m9 18 6-6-6-6" />
+                        </svg>
+                    </button>
+                </div>
             </div>
 
-            {/* ── Hero Content ──────────────────────────────────────── */}
-            <div className="container relative z-20">
-                <div className="max-w-4xl mx-auto px-4 sm:px-6 pt-16 sm:pt-20 text-center justify-center">
+            {/* ── Hero Content (below the video) ────────────────────── */}
+            <div className="relative z-20 w-full flex justify-center px-4 sm:px-6 py-14 sm:py-20">
+                <div className="w-full max-w-5xl flex flex-col items-center text-center">
 
-                    <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black text-white tracking-tight leading-[1.05] sm:leading-none mb-4 sm:mb-6 text-center">
-                        LET&apos;S MAKE SOME <br />
+                    <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.15] md:whitespace-nowrap mb-4 sm:mb-6">
+                        LET&apos;S MAKE SOME{' '}
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-db-orange via-amber-400 to-db-orange animate-shimmer">
                             MEMORIES
                         </span>
                     </h1>
 
-                    <p className="text-base sm:text-lg md:text-2xl font-medium text-gray-200 mb-8 sm:mb-10 max-w-2xl mx-auto font-body text-center px-2 sm:px-0">
+                    <p className="text-base sm:text-lg md:text-xl font-medium text-gray-300 mb-8 sm:mb-10 max-w-2xl mx-auto font-body">
                         Get ready for the ultimate mix of gourmet dining, premium drinks, Nitro bowling lanes, and India&apos;s biggest arcade setup.
                     </p>
 
-                    <div className="flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-4">
+                    <div className="w-full flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-4">
                         <button
                             onClick={scrollToPackages}
                             className="w-full sm:w-auto inline-flex items-center justify-center whitespace-nowrap bg-db-orange hover:bg-db-orange/90 text-white font-display tracking-widest uppercase font-bold text-sm sm:text-base px-6 sm:px-8 py-4 sm:py-6 rounded-full transition-all duration-300 neon-glow-orange hover:scale-105 active:scale-95"
@@ -53,22 +68,6 @@ export default function HeroVideo() {
                     </div>
 
                 </div>
-            </div>
-
-            {/* ── Scroll Down ───────────────────────────────────────── */}
-            <div className="absolute bottom-6 sm:bottom-8 left-1/2 -translate-x-1/2 z-20 animate-bounce">
-                <button
-                    onClick={scrollDown}
-                    className="flex flex-col items-center gap-2 text-[10px] sm:text-xs font-semibold tracking-widest text-muted-foreground hover:text-white transition-colors cursor-pointer"
-                >
-
-                    SCROLL DOWN
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
-                        className="h-4 w-4 rotate-90 text-db-orange">
-                        <path d="m9 18 6-6-6-6" />
-                    </svg>
-                </button>
             </div>
 
         </section>

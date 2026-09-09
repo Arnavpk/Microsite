@@ -131,6 +131,7 @@ export default function Testimonials() {
                     </div>
                 </div>
 
+
                 {/* Grid of all testimonials */}
                 {/* Grid of all testimonials */}
                 <div className="flex sm:grid overflow-x-auto snap-x snap-mandatory scroll-px-4 gap-4 sm:gap-5 -mx-4 px-4 sm:mx-0 sm:px-0 sm:overflow-visible sm:grid-cols-2 lg:grid-cols-4 max-w-6xl sm:mx-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">

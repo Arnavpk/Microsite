@@ -135,9 +135,9 @@ export default function FeastSelection() {
 
                 {/* Section Header */}
                 <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10 space-y-3">
-                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white">THE FEAST SELECTION</h2>
+                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white">CURATE YOUR FEAST</h2>
                     <p className="text-muted-foreground text-sm sm:text-base px-2 sm:px-0">
-                        Explore our diverse gourmet menu. Mix and match appetizers, main courses, and desserts to create your perfect event spread.
+                        From crowd-favourite bites to indulgent mains and desserts, customize the menu to create a spread made for your occasion.
                     </p>
                 </div>
 
@@ -180,12 +180,14 @@ export default function FeastSelection() {
 
                 {/* CTA */}
                 <div className="text-center">
-                    <button
-                        onClick={scrollToEnquiry}
+                    <a
+                        href="https://daveandbustersindia.com/asset/Mumbai%20Menu%20ONLINE%20(1).pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="w-full sm:w-auto inline-flex items-center justify-center whitespace-nowrap bg-[#17179a] border border-white/10 text-white font-display tracking-widest uppercase font-bold text-sm px-6 sm:px-8 py-4 sm:py-5 rounded-full hover:scale-105 active:scale-95 transition-all"
                     >
                         VIEW FULL MENU SPREAD
-                    </button>
+                    </a>
                 </div>
 
             </div>

@@ -14,15 +14,15 @@ export default function HeroVideo() {
     return (
         <section className="relative w-full bg-db-dark">
 
-            {/* ── Video (full screen) ───────────────────────────────── */}
-            <div className="relative h-[100svh] sm:h-[90vh] md:h-[85vh] w-full overflow-hidden">
-                <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-b from-transparent to-db-dark z-10" />
+            {/* ── Video (horizontal 16:9 on mobile, unchanged on desktop) ── */}
+            <div className="relative aspect-video sm:aspect-auto sm:h-[90vh] md:h-[85vh] w-full overflow-hidden">
+                <div className="absolute inset-x-0 bottom-0 h-12 sm:h-32 bg-gradient-to-b from-transparent to-db-dark z-10" />
                 <video autoPlay loop muted playsInline className="w-full h-full object-cover scale-105">
                     <source src="https://daveandbustersindia.com/asset/IMG_5271.MP4" type="video/mp4" />
                 </video>
 
-                {/* ── Scroll Down ───────────────────────────────────── */}
-                <div className="absolute bottom-6 sm:bottom-8 left-1/2 -translate-x-1/2 z-20 animate-bounce">
+                {/* ── Scroll Down (hidden on mobile) ───────────────────── */}
+                <div className="hidden sm:block absolute bottom-6 sm:bottom-8 left-1/2 -translate-x-1/2 z-20 animate-bounce">
                     <button
                         onClick={scrollDown}
                         className="flex flex-col items-center gap-2 text-[10px] sm:text-xs font-semibold tracking-widest text-white/60 hover:text-white transition-colors cursor-pointer"
@@ -42,14 +42,14 @@ export default function HeroVideo() {
                 <div className="w-full max-w-5xl flex flex-col items-center text-center">
 
                     <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.15] md:whitespace-nowrap mb-4 sm:mb-6">
-                        LET&apos;S MAKE SOME{' '}
+                        MAKE YOUR CELEBRATIONS{' '}
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-db-orange via-amber-400 to-db-orange animate-shimmer">
-                            MEMORIES
+                            EXTRAORDINARY.
                         </span>
                     </h1>
 
                     <p className="text-base sm:text-lg md:text-xl font-medium text-gray-300 mb-8 sm:mb-10 max-w-2xl mx-auto font-body">
-                        Get ready for the ultimate mix of gourmet dining, premium drinks, Nitro bowling lanes, and India&apos;s biggest arcade setup.
+                        From elevated dining and immersive arcade experiences to Nitro Bowling, every moment is designed for great times and unforgettable memories.
                     </p>
 
                     <div className="w-full flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-4">

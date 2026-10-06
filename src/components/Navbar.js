@@ -17,11 +17,11 @@ export default function Navbar() {
                         alt="Dave & Buster's Logo"
                         className="h-10 sm:h-12 md:h-16 w-auto object-contain hover:scale-105 transition-transform duration-200 shrink-0"
                     />
-                    <div className="border-l border-white/20 pl-2 sm:pl-4 min-w-0 max-w-[140px] sm:max-w-xs md:max-w-md lg:max-w-lg">
+                    <div className="border-l border-white/20 pl-2 sm:pl-4 min-w-0 max-w-[170px] sm:max-w-xs md:max-w-md lg:max-w-lg">
                         <span className="font-display text-[11px] sm:text-sm md:text-base font-black tracking-wider text-db-orange block truncate">
                             DAVE &amp; BUSTER&apos;S MUMBAI
                         </span>
-                        <span className="hidden sm:block text-[10px] md:text-xs text-muted-foreground leading-tight mt-0.5 truncate">
+                        <span className="block text-[9px] sm:text-[10px] md:text-xs text-muted-foreground leading-tight mt-0.5 sm:truncate">
                             4th Floor, Infiniti Mall, Andheri West.
                         </span>
                     </div>

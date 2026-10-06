@@ -72,11 +72,12 @@ export default function EnquiryForm() {
                         {/* Header */}
                         <div className="text-center space-y-2">
                             <span className="text-[11px] sm:text-xs font-bold tracking-widest text-db-orange uppercase">
-                                LET&apos;S GET IT STARTED
+                                GOT A REASON TO CELEBRATE?
                             </span>
-                            <h2 className="text-2xl sm:text-3xl md:text-5xl font-black text-white">READY TO PARTY?</h2>
+                            <h2 className="text-2xl sm:text-3xl md:text-5xl font-black text-white">LET&apos;S PLAN YOUR PARTY!</h2>
                             <p className="text-muted-foreground text-sm max-w-lg mx-auto px-2 sm:px-0">
-                                Tell us about your event, and our dedicated Sales Manager will reach out within 24 hours to help craft your perfect custom package.
+                                Tell us what you have in mind, and our dedicated team will connect with you within 24 hours to curate an experience made for your party.
+
                             </p>
                         </div>
 

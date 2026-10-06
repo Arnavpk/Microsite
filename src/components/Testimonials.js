@@ -27,6 +27,8 @@ const TESTIMONIALS = [
         occasion: 'Birthday Celebration',
         quote: "Booked the Prime Package for my daughter's birthday and the entire team went above and beyond. The food spread was incredible and the arcade credits kept the kids entertained for hours.",
         rating: 5,
+        photo: '/images/testimonials/t1-team.jpg',
+        logo: '/images/testimonials/t1-logo.png',
     },
     {
         id: 't2',
@@ -35,6 +37,8 @@ const TESTIMONIALS = [
         occasion: 'Corporate Offsite',
         quote: 'We hosted our team offsite here and it was a huge hit. The bowling lanes and the private event space made coordinating 40+ people surprisingly smooth.',
         rating: 5,
+        photo: '/images/testimonials/t1-team.jpg',
+        logo: '/images/testimonials/t1-logo.png',
     },
     {
         id: 't3',
@@ -43,6 +47,8 @@ const TESTIMONIALS = [
         occasion: 'Anniversary Dinner',
         quote: "Came in for our anniversary and stayed way longer than planned. Great drinks, great music, and the staff made sure our table never felt neglected even on a packed Saturday night.",
         rating: 5,
+        photo: '/images/testimonials/t1-team.jpg',
+        logo: '/images/testimonials/t1-logo.png',
     },
     {
         id: 't4',
@@ -51,6 +57,8 @@ const TESTIMONIALS = [
         occasion: "Kid's Birthday Party",
         quote: 'Second time booking the Mocktail Package for my son and once again everything was seamless — from setup to the food service timing. Highly recommend for family events.',
         rating: 4,
+        photo: '/images/testimonials/t1-team.jpg',
+        logo: '/images/testimonials/t1-logo.png',
     },
 ];
 
@@ -90,9 +98,10 @@ export default function Testimonials() {
 
                 {/* Section header */}
                 <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10 space-y-3">
-                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white leading-tight">HEAR FROM OUR GUESTS</h2>
+                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white leading-tight">PARTIES WE LOVED HOSTING</h2>
                     <p className="text-muted-foreground text-sm sm:text-base px-2 sm:px-0">
-                        Real stories from real celebrations — birthdays, offsites, and everything in between.
+                        Great teams, big moments, and plenty of stories worth remembering. They brought the crew, we brought the fun.
+
                     </p>
                 </div>
 
@@ -138,19 +147,39 @@ export default function Testimonials() {
                     {TESTIMONIALS.map((t) => (
                         <div
                             key={t.id}
-                            className="snap-center shrink-0 w-[82%] sm:w-auto flex flex-col gap-4 rounded-xl border border-white/10 bg-db-dark-card p-5 sm:p-6 hover:border-db-orange/30 transition-colors duration-300"
+                            className="snap-center shrink-0 w-[82%] sm:w-auto h-[440px] flex flex-col rounded-xl border border-white/10 bg-db-dark-card overflow-hidden hover:border-db-orange/30 transition-colors duration-300"
                         >
-                            <StarRating rating={t.rating} />
-                            <p className="text-sm text-gray-300 leading-relaxed flex-1">
-                                "{t.quote}"
-                            </p>
-                            <div className="pt-3 border-t border-white/10 space-y-0.5">
-                                <p className="font-display font-bold text-white text-sm tracking-wide">
-                                    {t.name}
+                            {/* Team photo (~58% of card) + overlapping logo badge */}
+                            <div className="relative h-[58%] shrink-0">
+                                <div className="absolute inset-0 overflow-hidden">
+                                    {t.photo ? (
+                                        <img src={t.photo} alt={`${t.name} team`} className="w-full h-full object-cover" />
+                                    ) : (
+                                        <div className="w-full h-full bg-gradient-to-br from-db-orange/20 to-db-blue/20" />
+                                    )}
+                                    <div className="absolute inset-0 bg-gradient-to-t from-db-dark-card/60 to-transparent" />
+                                </div>
+
+                                {/* Logo badge overlapping bottom edge */}
+                                <div className="absolute -bottom-6 left-5 z-10 h-12 w-12 rounded-xl bg-white border border-white/20 shadow-lg flex items-center justify-center overflow-hidden">
+                                    {t.logo ? (
+                                        <img src={t.logo} alt={`${t.name} logo`} className="h-full w-full object-contain p-1.5" />
+                                    ) : (
+                                        <span className="text-db-dark font-black text-lg">{t.name.charAt(0)}</span>
+                                    )}
+                                </div>
+                            </div>
+
+                            {/* Content */}
+                            <div className="flex flex-col gap-3 flex-1 min-h-0 p-5 pt-9">
+                                <StarRating rating={t.rating} />
+                                <p className="text-sm text-gray-300 leading-relaxed line-clamp-4">
+                                    "{t.quote}"
                                 </p>
-                                <p className="text-xs text-muted-foreground">
-                                    {t.occasion} &middot; {t.date}
-                                </p>
+                                <div className="mt-auto pt-3 border-t border-white/10 space-y-0.5">
+                                    <p className="font-display font-bold text-white text-sm tracking-wide">{t.name}</p>
+                                    <p className="text-xs text-muted-foreground">{t.occasion} &middot; {t.date}</p>
+                                </div>
                             </div>
                         </div>
                     ))}

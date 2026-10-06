@@ -74,10 +74,12 @@ export default function VenueDetails() {
                         </p>
                         <div className="text-muted-foreground space-y-4 font-body text-sm sm:text-base leading-relaxed">
                             <p>
-                                Dave & Buster's brings America's iconic entertainment experience to Mumbai. Located at Infiniti Mall, Andheri West, it's your all-in-one destination for arcade games, VR, bowling, sports screenings, great food, and signature drinks.
+                                Planning a corporate showdown, an ice-breaker, or celebrating a big win? We’ve got you.
+
                             </p>
                             <p>
-                                From birthday parties and corporate events to family outings and celebrations, our customizable packages make every occasion unforgettable.
+                                Battle it out at Nitro Bowling, unleash your competitive side with arcade games, dig into great food, raise a glass with signature drinks, and make memories worth taking back.
+
                             </p>
                         </div>
                     </div>

@@ -153,9 +153,9 @@ export default function Packages() {
 
                 {/* Header */}
                 <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10 space-y-3">
-                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white leading-tight">CHOOSE YOUR VIBE</h2>
+                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white leading-tight">PICK YOUR VIBE!</h2>
                     <p className="text-muted-foreground text-sm sm:text-base px-2 sm:px-0">
-                        Explore our signature party packages designed to cater to any scale, crowd, or budget. Select a package to view its offerings, add-ons, and terms.
+                        Choose from curated packages designed for groups big and small, with great food, drinks and add-ons to build an experience that’s all yours.
                     </p>
                 </div>
 
@@ -184,6 +184,12 @@ export default function Packages() {
                                     'text-[11px] sm:text-xs font-bold font-body normal-case tracking-normal',
                                     active ? 'text-white/90' : 'text-db-orange',
                                 ].join(' ')}>
+                                    <span className={[
+                                        'mr-1 text-[10px] font-normal',
+                                        active ? 'text-white/60' : 'text-muted-foreground',
+                                    ].join(' ')}>
+                                        starts at
+                                    </span>
                                     {p.price}
                                     <span className={[
                                         'ml-1 text-[10px] font-normal',

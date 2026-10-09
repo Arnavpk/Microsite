@@ -92,9 +92,18 @@ export default function Footer() {
                                 <MapPinIcon className="h-5 w-5 text-db-orange shrink-0 mt-0.5" />
                                 <span className="leading-relaxed">Dave &amp; Buster&apos;s, Infiniti Mall, Link Road, Phase D, Oshiwara, Andheri West, Mumbai, Maharashtra 400053</span>
                             </li>
-                            <li className="flex items-center gap-3">
-                                <PhoneIcon className="h-5 w-5 text-db-orange shrink-0" />
-                                <a href="tel:+919876543210" className="hover:text-db-orange transition-colors">+91 98765 43210</a>
+                            <li className="flex items-start gap-3 text-left">
+                                <PhoneIcon className="h-5 w-5 text-db-orange shrink-0 mt-0.5" />
+                                <div className="space-y-1.5">
+                                    <div className="flex flex-wrap items-baseline gap-x-2">
+                                        <span className="text-white/80 font-medium">Chirag:</span>
+                                        <a href="tel:+919876543210" className="hover:text-db-orange transition-colors">+91 98765 43210</a>
+                                    </div>
+                                    <div className="flex flex-wrap items-baseline gap-x-2">
+                                        <span className="text-white/80 font-medium">Siddharth:</span>
+                                        <a href="tel:+919876543211" className="hover:text-db-orange transition-colors">+91 98765 43211</a>
+                                    </div>
+                                </div>
                             </li>
                             <li className="flex items-center gap-3 min-w-0 text-left">
                                 <MailIcon className="h-5 w-5 text-db-orange shrink-0" />

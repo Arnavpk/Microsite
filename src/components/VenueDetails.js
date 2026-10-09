@@ -44,8 +44,11 @@ export default function VenueDetails() {
                 {/* Section header */}
                 <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10 space-y-2">
                     <h2 className="text-2xl sm:text-3xl md:text-5xl font-black text-white text-center">
-                        EAT, DRINK, PLAY, WATCH
+                        EAT. DRINK. PLAY. WATCH.
                     </h2>
+                    <p className="text-base sm:text-lg md:text-[21px] font-semibold text-db-orange tracking-wider uppercase font-display">
+                        EAT, DRINK, PLAY, WATCH — ALL UNDER ONE ROOF
+                    </p>
                 </div>
 
                 {/* Main grid: images left | text right */}
@@ -69,9 +72,9 @@ export default function VenueDetails() {
 
                     {/* Brand copy — 6 of 12 cols on lg */}
                     <div className="lg:col-span-6 space-y-4 sm:space-y-6 text-center lg:text-left">
-                        <p className="text-base sm:text-lg md:text-[21px] font-semibold text-db-orange tracking-wider uppercase font-display">
+                        {/* <p className="text-base sm:text-lg md:text-[21px] font-semibold text-db-orange tracking-wider uppercase font-display">
                             EAT, DRINK, PLAY, WATCH — ALL UNDER ONE ROOF
-                        </p>
+                        </p> */}
                         <div className="text-muted-foreground space-y-4 font-body text-sm sm:text-base leading-relaxed">
                             <p>
                                 Planning a corporate showdown, an ice-breaker, or celebrating a big win? We’ve got you.

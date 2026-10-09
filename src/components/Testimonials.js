@@ -27,7 +27,7 @@ const TESTIMONIALS = [
         occasion: 'Birthday Celebration',
         quote: "Booked the Prime Package for my daughter's birthday and the entire team went above and beyond. The food spread was incredible and the arcade credits kept the kids entertained for hours.",
         rating: 5,
-        photo: '/images/testimonials/t1-team.jpg',
+        photo: 'https://daveandbustersindia.com/asset/1784025043407.jpg',
         logo: '/images/testimonials/t1-logo.png',
     },
     {
@@ -37,7 +37,7 @@ const TESTIMONIALS = [
         occasion: 'Corporate Offsite',
         quote: 'We hosted our team offsite here and it was a huge hit. The bowling lanes and the private event space made coordinating 40+ people surprisingly smooth.',
         rating: 5,
-        photo: '/images/testimonials/t1-team.jpg',
+        photo: 'https://daveandbustersindia.com/asset/FCM%20Travel.jpg',
         logo: '/images/testimonials/t1-logo.png',
     },
     {
@@ -47,7 +47,7 @@ const TESTIMONIALS = [
         occasion: 'Anniversary Dinner',
         quote: "Came in for our anniversary and stayed way longer than planned. Great drinks, great music, and the staff made sure our table never felt neglected even on a packed Saturday night.",
         rating: 5,
-        photo: '/images/testimonials/t1-team.jpg',
+        photo: 'https://daveandbustersindia.com/asset/WhatsApp%20Image%202026-09-04%20at%2012.19.32%20PM.jpeg',
         logo: '/images/testimonials/t1-logo.png',
     },
     {
@@ -57,7 +57,7 @@ const TESTIMONIALS = [
         occasion: "Kid's Birthday Party",
         quote: 'Second time booking the Mocktail Package for my son and once again everything was seamless — from setup to the food service timing. Highly recommend for family events.',
         rating: 4,
-        photo: '/images/testimonials/t1-team.jpg',
+        photo: 'https://daveandbustersindia.com/asset/WhatsApp%20Image%202026-09-04%20at%2012.19.32%20PM.jpeg',
         logo: '/images/testimonials/t1-logo.png',
     },
 ];
@@ -106,7 +106,7 @@ export default function Testimonials() {
                 </div>
 
                 {/* Featured rotating quote */}
-                <div className="max-w-3xl mx-auto mb-10 sm:mb-12">
+                {/* <div className="max-w-3xl mx-auto mb-10 sm:mb-12">
                     <div className="relative rounded-2xl sm:rounded-3xl border border-db-orange/20 bg-db-dark-card p-6 sm:p-10 text-center shadow-2xl overflow-hidden">
                         <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-db-orange via-db-blue to-db-orange" />
                         <QuoteIcon className="h-8 w-8 sm:h-10 sm:w-10 text-db-orange/30 mx-auto mb-4" />
@@ -123,10 +123,10 @@ export default function Testimonials() {
                             <p className="text-xs sm:text-sm text-muted-foreground">
                                 {featured.occasion} &middot; {featured.date}
                             </p>
-                        </div>
+                        </div> */}
 
-                        {/* Dot indicators */}
-                        <div className="flex justify-center gap-2 mt-6">
+                {/* Dot indicators */}
+                {/* <div className="flex justify-center gap-2 mt-6">
                             {TESTIMONIALS.map((t, i) => (
                                 <button
                                     key={t.id}
@@ -138,51 +138,51 @@ export default function Testimonials() {
                             ))}
                         </div>
                     </div>
-                </div>
+                </div> */}
+
 
 
                 {/* Grid of all testimonials */}
-                {/* Grid of all testimonials */}
-                <div className="flex sm:grid overflow-x-auto snap-x snap-mandatory scroll-px-4 gap-4 sm:gap-5 -mx-4 px-4 sm:mx-0 sm:px-0 sm:overflow-visible sm:grid-cols-2 lg:grid-cols-4 max-w-6xl sm:mx-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-                    {TESTIMONIALS.map((t) => (
-                        <div
-                            key={t.id}
-                            className="snap-center shrink-0 w-[82%] sm:w-auto h-[440px] flex flex-col rounded-xl border border-white/10 bg-db-dark-card overflow-hidden hover:border-db-orange/30 transition-colors duration-300"
-                        >
-                            {/* Team photo (~58% of card) + overlapping logo badge */}
-                            <div className="relative h-[58%] shrink-0">
-                                <div className="absolute inset-0 overflow-hidden">
-                                    {t.photo ? (
-                                        <img src={t.photo} alt={`${t.name} team`} className="w-full h-full object-cover" />
-                                    ) : (
-                                        <div className="w-full h-full bg-gradient-to-br from-db-orange/20 to-db-blue/20" />
-                                    )}
-                                    <div className="absolute inset-0 bg-gradient-to-t from-db-dark-card/60 to-transparent" />
+                {/* Infinite carousel of testimonials */}
+                {/* Infinite carousel */}
+                <div className="relative overflow-hidden group -mx-4 sm:mx-0 [mask-image:linear-gradient(to_right,transparent,black_6%,black_94%,transparent)]">
+                    <div className="flex w-max animate-marquee group-hover:[animation-play-state:paused]">
+                        {[...TESTIMONIALS, ...TESTIMONIALS, ...TESTIMONIALS, ...TESTIMONIALS].map((t, i) => (
+                            <div
+                                key={`${t.id}-${i}`}
+                                aria-hidden={i >= TESTIMONIALS.length}
+                                className="shrink-0 w-[260px] sm:w-[300px] mr-4 sm:mr-5 h-[340px] flex flex-col rounded-xl border border-white/10 bg-db-dark-card overflow-hidden hover:border-db-orange/30 transition-colors duration-300"
+                            >
+                                {/* Team photo + overlapping logo badge */}
+                                <div className="relative h-[72%] shrink-0">
+                                    <div className="absolute inset-0 overflow-hidden">
+                                        {t.photo ? (
+                                            <img src={t.photo} alt={`${t.occasion} team`} className="w-full h-full object-cover" />
+                                        ) : (
+                                            <div className="w-full h-full bg-gradient-to-br from-db-orange/20 to-db-blue/20" />
+                                        )}
+                                        <div className="absolute inset-0 bg-gradient-to-t from-db-dark-card/60 to-transparent" />
+                                    </div>
+
+                                    {/* Logo badge overlapping bottom edge */}
+                                    <div className="absolute -bottom-6 left-5 z-10 h-12 w-12 rounded-xl bg-white border border-white/20 shadow-lg flex items-center justify-center overflow-hidden">
+                                        {t.logo ? (
+                                            <img src={t.logo} alt={`${t.occasion} logo`} className="h-full w-full object-contain p-1.5" />
+                                        ) : (
+                                            <span className="text-db-dark font-black text-lg">{t.occasion.charAt(0)}</span>
+                                        )}
+                                    </div>
                                 </div>
 
-                                {/* Logo badge overlapping bottom edge */}
-                                <div className="absolute -bottom-6 left-5 z-10 h-12 w-12 rounded-xl bg-white border border-white/20 shadow-lg flex items-center justify-center overflow-hidden">
-                                    {t.logo ? (
-                                        <img src={t.logo} alt={`${t.name} logo`} className="h-full w-full object-contain p-1.5" />
-                                    ) : (
-                                        <span className="text-db-dark font-black text-lg">{t.name.charAt(0)}</span>
-                                    )}
+                                {/* Occasion only */}
+                                <div className="flex items-center flex-1 min-h-0 px-5 pt-6">
+                                    <p className="font-display font-bold text-white text-sm sm:text-base tracking-wide uppercase">
+                                        {t.occasion}
+                                    </p>
                                 </div>
                             </div>
-
-                            {/* Content */}
-                            <div className="flex flex-col gap-3 flex-1 min-h-0 p-5 pt-9">
-                                <StarRating rating={t.rating} />
-                                <p className="text-sm text-gray-300 leading-relaxed line-clamp-4">
-                                    "{t.quote}"
-                                </p>
-                                <div className="mt-auto pt-3 border-t border-white/10 space-y-0.5">
-                                    <p className="font-display font-bold text-white text-sm tracking-wide">{t.name}</p>
-                                    <p className="text-xs text-muted-foreground">{t.occasion} &middot; {t.date}</p>
-                                </div>
-                            </div>
-                        </div>
-                    ))}
+                        ))}
+                    </div>
                 </div>
 
             </div>

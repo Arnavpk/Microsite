@@ -223,7 +223,9 @@ export default function Packages() {
                                     </h3>
 
                                     {/* ── Price display in card ── */}
+                                    {/* ── Price display in card ── */}
                                     <div className="flex items-baseline gap-2 pt-1">
+                                        <span className="text-white/60 text-xs leading-none">starts at</span>
                                         <span className="text-db-orange text-2xl sm:text-3xl font-black font-body leading-none">
                                             {pkg.price}
                                         </span>

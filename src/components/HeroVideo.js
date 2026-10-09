@@ -49,7 +49,7 @@ export default function HeroVideo() {
                     </h1>
 
                     <p className="text-base sm:text-lg md:text-xl font-medium text-gray-300 mb-8 sm:mb-10 max-w-2xl mx-auto font-body">
-                        From elevated dining and immersive arcade experiences to Nitro Bowling, every moment is designed for great times and unforgettable memories.
+                        From elevated dining and immersive arcade experiences to nitro bowling, every moment is designed for great times and unforgettable memories.
                     </p>
 
                     <div className="w-full flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-4">

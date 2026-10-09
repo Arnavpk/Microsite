@@ -142,7 +142,7 @@ export default function FeastSelection() {
                 </div>
 
                 {/* Menu Cards */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6 max-w-4xl mx-auto mb-8 sm:mb-10">
+                {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6 max-w-4xl mx-auto mb-8 sm:mb-10">
                     {MENU_CARDS.map((card) => (
                         <button
                             key={card.id}
@@ -151,7 +151,7 @@ export default function FeastSelection() {
                         >
                             <div className="p-5 sm:p-6 space-y-4">
 
-                                {/* Card header */}
+                                
                                 <div className="flex justify-between items-center border-b border-white/10 pb-3 gap-2">
                                     <h3 className="text-base sm:text-lg font-bold text-white tracking-wider flex items-center gap-2">
                                         <UtensilsIcon className="h-5 w-5 text-db-orange shrink-0" />
@@ -160,7 +160,7 @@ export default function FeastSelection() {
                                     <span className="text-xs text-db-orange font-semibold whitespace-nowrap">{card.count}</span>
                                 </div>
 
-                                {/* Item list */}
+                               
                                 <ul className="space-y-2 text-sm text-gray-300">
                                     {card.items.map((item) => (
                                         <li key={item} className="flex items-center gap-2">
@@ -176,7 +176,7 @@ export default function FeastSelection() {
                             </div>
                         </button>
                     ))}
-                </div>
+                </div> */}
 
                 {/* CTA */}
                 <div className="text-center">

@@ -61,7 +61,7 @@ export default function Navbar() {
                         </button>
 
                         {phoneOpen && (
-                            <div className="absolute right-0 top-full mt-3 w-64 rounded-xl border border-white/10 bg-db-dark-card p-4 shadow-2xl z-50 space-y-3">
+                            <div className="absolute right-0 top-full mt-3 w-64 rounded-xl border border-white/15 bg-[#0d0d24] p-4 shadow-2xl shadow-black/60 z-50 space-y-3">
                                 <div>
                                     <p className="text-xs text-muted-foreground">Name One</p>
                                     <a href="tel:+919876543210" className="text-sm font-semibold text-white hover:text-db-orange transition-colors">
